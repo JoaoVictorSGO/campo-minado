@@ -110,6 +110,16 @@ public class Campo {
 		marcado = false;
 	}
 	
+	
+	
+	public List<Campo> getVizinhos() {
+		return vizinhos;
+	}
+
+	public void setVizinhos(List<Campo> vizinhos) {
+		this.vizinhos = vizinhos;
+	}
+
 	@Override
 	public String toString() {
 		if(marcado) {

@@ -12,7 +12,6 @@ public class Tabuleiro {
 	private final List<Campo> campos = new  ArrayList<>();
 
 	public Tabuleiro(int linhas, int colunas, int minas) {
-		super();
 		this.linhas = linhas;
 		this.colunas = colunas;
 		this.minas = minas;
@@ -52,7 +51,7 @@ public class Tabuleiro {
 		}
 	}
 	
-	private void sortearMinas() {
+	private void sortearMinas() { // Pelo menos uma mina o jogo vai ter!
 		long minasArmadas = 0;
 		Predicate<Campo> minado = c -> c.isMinar();
 		do {
@@ -87,4 +86,10 @@ public class Tabuleiro {
 		}
 		return sb.toString();
 	}
+
+	public List<Campo> getCampos() {
+		return campos;
+	}
+	
+	
 }
